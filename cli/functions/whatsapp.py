@@ -1,7 +1,11 @@
+import time
+
 import click
 import pandas as pd
 import os.path
 import pywhatkit as pwk
+from keyboard import press
+import subprocess
 
 
 def send(numero: str):
@@ -10,6 +14,14 @@ def send(numero: str):
             phone_no=f"+{numero}",
             message="Hello"
         )
+
+        # Set browser to active window
+        app_path = "/Applications/Firefox\ Developer\ Edition.app"
+        cmd = f"open -a {app_path}"
+        subprocess.call(cmd, shell=True)
+
+        # Automatically press keyboard `Enter` key
+        press("enter")
         return 'Succès'
     except Exception as e:
         return f'Erreur: {str(e)}'
