@@ -98,3 +98,18 @@ Time: 17:7
 Phone Number: +2250788466748
 Message: Hello
 --------------------
+Date: 27/1/2025
+Time: 17:47
+Phone Number: +2250788466748
+Message: *Confirmation de votre commande 🛒* Bonjour cher client(e), Merci pour votre commande chez AKWABA Store ! 🎉 🛍 Détail de votre commande : • Produit : Chapelet • Quantité : 1 • Total : 5000 • Mode de paiement : Paiement à la livraison 📦 Votre commande sera expédiée sous *24h* . Vous recevrez un message dès qu’elle sera en route. Merci pour votre confiance et à bientôt ! 😊
+--------------------
+Date: 27/1/2025
+Time: 17:47
+Phone Number: +2250788466748
+Message: *Confirmation de votre commande 🛒* Bonjour cher client(e), Merci pour votre commande chez AKWABA Store ! 🎉 🛍 Détail de votre commande : • Produit : Chapelet • Quantité : 2 • Total : 10000 • Mode de paiement : Paiement à la livraison 📦 Votre commande sera expédiée sous *24h* . Vous recevrez un message dès qu’elle sera en route. Merci pour votre confiance et à bientôt ! 😊
+--------------------
+Date: 27/1/2025
+Time: 17:48
+Phone Number: +2250788466748
+Message: *Confirmation de votre commande 🛒* Bonjour cher client(e), Merci pour votre commande chez AKWABA Store ! 🎉 🛍 Détail de votre commande : • Produit : Chapelet • Quantité : 1 • Total : 5000 • Mode de paiement : Paiement à la livraison 📦 Votre commande sera expédiée sous *24h* . Vous recevrez un message dès qu’elle sera en route. Merci pour votre confiance et à bientôt ! 😊
+--------------------
