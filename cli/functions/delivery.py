@@ -4,9 +4,7 @@ import click
 
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import landscape, letter
-from reportlab.lib import colors
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.lib.utils import ImageReader
 import math
 from datetime import datetime
 
@@ -41,6 +39,8 @@ def create_delivery_card(file_name: str) -> None:
     files_directory = "cli"
 
     file_path = os.path.join(files_directory, file_name)
+    logo = ImageReader(
+        'https://scontent.fabj4-2.fna.fbcdn.net/v/t39.30808-6/461741937_122102658584548102_6542300674818671662_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=nURUv6JPf68Q7kNvgEvdKUo&_nc_zt=23&_nc_ht=scontent.fabj4-2.fna&_nc_gid=ADi_TE3EkvTVqzq-W7Yx62o&oh=00_AYCY1NcFAewdpy9tDmCnFrfVa3VEc5XtXmka8NogdIX6Kw&oe=67A063F6')
 
     """ Check if the file exists """
     if os.path.exists(file_path):
@@ -90,9 +90,12 @@ def create_delivery_card(file_name: str) -> None:
                 text_x = x + 10
                 text_y = y + box_height - 20
 
+                # Ajout de l'image
+                c.drawImage(logo, text_x + 270, text_y - 40, mask='auto', width=65, height=50)
+
                 # Ajouter les informations du contact
                 c.setFont("Helvetica-Bold", 12)
-                c.drawString(text_x, text_y, f"{contact['Nom complet']}")
+                c.drawString(text_x, text_y, f"{contact['Nom complet'].upper()}")
 
                 c.setFont("Helvetica", 14)
                 c.drawString(text_x, text_y - 20, f"Tél: {contact['Telephone']}")
@@ -101,7 +104,7 @@ def create_delivery_card(file_name: str) -> None:
                 address_lines = wrap_text(str(contact['Adresse']), c, "Helvetica", 12, box_width - 100)
 
                 # Ajouter les informations sur le produit
-                c.setFont("Helvetica-Bold", 12)
+                c.setFont("Helvetica-Bold", 11)
                 c.drawString(text_x, text_y - 70, f"Produit: {contact['Produit']} - Quantité: {contact['Quantite']}")
 
                 # Ajouter le prix
